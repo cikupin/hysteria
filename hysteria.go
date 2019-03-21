@@ -79,6 +79,17 @@ func Configure(cmd string, cfg *Config) {
 	g.confs[cmd].pollOnErr = cfg.PollTripOnError
 }
 
+// ConfigureMany applies settings for a set of circuit configurations
+//args:
+//  cmds: hysteria commands: map[string]*Config
+//returns:
+//  void
+func ConfigureMany(cmds map[string]*Config) {
+	for k, v := range cmds {
+		Configure(k, v)
+	}
+}
+
 //Exec executes hystrix general operation
 //args:
 //  cmd: hysteria command: string
