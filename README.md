@@ -1,4 +1,4 @@
-#Hysteria - Hystrix Wrapper
+## Hysteria - Hystrix Wrapper
 
 Hysteria enables:
 - Specify errors to trip circuit breaker
